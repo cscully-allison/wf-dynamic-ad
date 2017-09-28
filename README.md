@@ -3,9 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ## Dependncies
-[NodeJS](https://nodejs.org/en/download/) version 6.9.xx or greater
-[NPM Version](https://nodejs.org/en/download/) 3.x.x or greater
-Angular CLI Version 1.x.x 
+* [NodeJS](https://nodejs.org/en/download/) version 6.9.xx or greater
+* [NPM Version](https://nodejs.org/en/download/) 3.x.x or greater
+* Angular CLI Version 1.x.x 
 
 [More Information and Installation Instructions](https://angular.io/guide/quickstart)
 
