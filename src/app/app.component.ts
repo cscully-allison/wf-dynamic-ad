@@ -10,7 +10,7 @@ export class AppComponent {
   offer_classes = [1, 2, 3, 4, 5, 6];
   selectedClass: number;
 
-
+  //function replaced with a ajax call
   onSelect(classification: number) {
     this.selectedClass = classification;
   }
