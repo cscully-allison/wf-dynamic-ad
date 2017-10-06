@@ -1,4 +1,4 @@
-FROM ubuntu: 16.04
+FROM ubuntu:16.04
 MAINTAINER Connor Scully-Allison
 LABEL description="Front End Application for Wells Fargo Data Mining Competition"
 
@@ -18,5 +18,4 @@ ENV FRONTEND_PORT 86
 ENV FRONTEND_HOST 0.0.0.0
 EXPOSE ${FRONTEND_PORT}
 
-CMD ng serve 
-
+CMD ng serve
