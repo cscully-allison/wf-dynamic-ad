@@ -8,7 +8,7 @@ RUN apt-get install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_4.x 
 RUN apt-get install -y nodejs
 
-RUN npm install -g @angular/cli
+RUN npm install @angular/cli
 
 COPY . /wf-frontend
 WORKDIR /wf-frontend
