@@ -14,19 +14,20 @@ const adDisplays = [
     selector: 'advertisement',
     template: `
       <div *ngIf="classification" class="ad-box" style="text-align:center">
-          <h1 class="banner">Dynamic Advertiesement</h1>
+          <h1 class="inner-ad-banner">Dynamic Advertiesement</h1>
           <h1>{{adDisplays[classification].title}}</h1>
       </div>
     `,
     styles: [`
       .ad-box {
           height: 20em;
-          width: 20em;
+          width: 40em;
           border: 2px solid black;
-          float: left;
+          margin: auto;
       }
-      .banner {
+      .inner-ad-banner {
           background-color: coral;
+          min-height: 64px;
           margin-top:0px;
       }
     `,]

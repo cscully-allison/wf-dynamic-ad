@@ -1,16 +1,81 @@
-.opt-container{
-  height: 1000px;
-  margin-right: 4em;
-  margin-left: 20em;
-  float:left;
+.banner{
+  min-height: 300px;
+  width: 100%;
 }
 
-.options {
-  list-style-type: none;
-  width: 300px;
-  margin: 0px !important;
-  display: inline;
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    max-width: 100%;
 }
+
+.form-field{
+  padding-top: 8px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(255,150,150, 1.0);
+}
+
+.form-field > div{
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: rgba(0,0,0, 0.8);
+}
+
+.border-divider{
+  width: 200px;
+  height: 1px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-bottom: solid black 1px;
+}
+
+.form-field > input{
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 40px;
+}
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+.button-holder{
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 412px;
+
+}
+
+.submit-button{
+  height: 80px;
+  min-width: 412px;
+  border: solid black 1px;
+  border-radius: 4px;
+  max-width: 100px;
+
+  margin-bottom: 32px;
+
+}
+
+
 
 ul > .badge {
   background-color: firebrick;

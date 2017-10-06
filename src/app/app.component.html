@@ -1,22 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="text-align:center; margin-top: 16px; margin-bottom:8px;">
   <h1>
     Wells Fargo Competition Dynamic UI
   </h1>
 </div>
-<div>Checking Acct Value <input [(ngModel)]="value"/> $ {{value}} </div> <br/>
-<div>Attrib. <input [(ngModel)]="attrib"> {{attrib}} </div><br/>
-<button (click)="postFormValues()">Submit</button>
+
+
 <div style="text-align:center">
-    <h2> Suggested Advertisement: </h2>
+    <h1> Input Some Values </h1>
 </div>
-<div class="opt-container">
-  <ul class="options">
-    <div *ngFor="let class of offer_classes"
-          (click)="onSelect(class)"
-          class="badge">
-      <li >Customer Classification {{class}}</li>
+<div class="banner">
+  <div class="form">
+    <div class="form-field">
+      <div>Checking Acct Value </div>
+      <div class="border-divider"></div>
+      <input type="text" [(ngModel)]="PostBody.check_bal_altered"/> <br/>
     </div>
-  </ul>
+    <div class="form-field">
+      <div> Number of Savings Accounts </div>
+      <div class="border-divider"></div>
+      <input type="text" [(ngModel)]="PostBody.savings_acct_cnt"><br/>
+    </div>
+    <div class="form-field">
+      <div>Number of Checking Accounts</div>
+      <div class="border-divider"></div>
+      <input type="text" [(ngModel)]="PostBody.checking_acct_cnt"><br/>
+    </div>
+  </div>
+  <div class="button-holder">
+    <button class="submit-button" (click)="postFormValues()">Submit</button>
+  <div>
 </div>
-<advertisement [classification]=selectedClass></advertisement>
+<div class="banner">
+  <advertisement [classification]=selectedClass></advertisement>
+</div>
