@@ -12,7 +12,7 @@ RUN apt-get install -y npm
 COPY . /wf-frontend
 WORKDIR /wf-frontend
 
-RUN npm install @angular/cli
+RUN npm install -g @angular/cli
 RUN npm install
 
 EXPOSE 4444
