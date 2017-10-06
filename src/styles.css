@@ -3,3 +3,12 @@ body {
   padding: 0.0px;
   margin: 0.0px !important;
 }
+
+
+.red-bg{
+  background-color: #BB0826;
+}
+
+.yellow-bg{
+  background-color: #FCC60A;
+}

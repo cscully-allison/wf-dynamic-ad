@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div  class="red-bg header-banner">
+<div style="text-align:center; margin-top: 16px; margin-bottom:8px;">
   <h1>
     Wells Fargo Competition Dynamic UI
   </h1>
@@ -29,15 +29,8 @@
   </div>
   <div class="button-holder">
     <button class="submit-button" (click)="postFormValues()">Submit</button>
-  </div>
-</div>
-<div class="ad-banner">
   <advertisement [classification]=selectedClass></advertisement>
+  <div>
 </div>
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<div class="banner">
+</div>
