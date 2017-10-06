@@ -5,7 +5,7 @@ LABEL description="Front End Application for Wells Fargo Data Mining Competition
 
 RUN apt-get update -y
 RUN apt-get install --yes curl
-RUN curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_4.x 
 RUN apt-get install -y nodejs
 
 RUN npm install -g @angular/cli
