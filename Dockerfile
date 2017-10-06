@@ -7,7 +7,9 @@ RUN apt-get update -y
 RUN apt-get install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_4.x 
 RUN apt-get install -y nodejs
-RUN apt-get install -y npm
+
+RUN nodejs --version 
+RUN npm --version
 
 COPY . /wf-frontend
 WORKDIR /wf-frontend
