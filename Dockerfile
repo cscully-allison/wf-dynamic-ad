@@ -7,6 +7,8 @@ RUN apt-get update -y
 RUN apt-get install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_4.x 
 RUN apt-get install -y nodejs
+RUN apt-get install -y build-essential
+
 
 RUN nodejs --version 
 RUN npm --version
