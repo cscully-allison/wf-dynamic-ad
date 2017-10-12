@@ -5,11 +5,11 @@ const numLevels = 3;
 const adDisplays = [
   {id: 0, title: 'Null', text: 'Null Display' },
   {id: 1, title: 'Home loans avialable up to 100,000 dollars. Click to find out more.'},
-  {id: 2, title: 'Home loans avialable up to 100,000 dollars. Click to find out more.' },
+  {id: 2, title: 'Home loans avialable up to 400,000 dollars. Click to find out more.' },
   {id: 3, title: 'Home loans avialable up to 1,000,000 dollars. Click to find out more.' },
-  {id: 4, title: 'Home loans avialable up to 1,000,000 dollars. Click to find out more.' },
-  {id: 5, title: 'Property loans avialable up to 10,000,000 dollars. Click to find out more.' },
-  {id: 6, title: 'Peoperty loans avialable up to 10,000,000 dollars. Click to find out more.' },
+  {id: 4, title: 'Home loans avialable up to 2,000,000 dollars. Click to find out more.' },
+  {id: 5, title: 'Property loans avialable up to 5,000,000 dollars. Click to find out more.' },
+  {id: 6, title: 'Property loans avialable up to 10,000,000 dollars. Click to find out more.' },
 ];
 
 const leadingQueries = [
@@ -45,6 +45,7 @@ const localImages = [
           border: 2px solid black;
           margin: auto;
           margin-bottom: 4em;
+	  position: relative;	
 
           background-color: rgba(100, 100, 100, .8);
       }
@@ -61,14 +62,13 @@ const localImages = [
           border-bottom: 2px solid rgba(252, 198, 10, 1);
           border-top: 2px solid rgba(252, 198, 10, 1);
           padding: 15px;
-          margin-top:6px;
       }
       .text-color{
           color: rgba(10,10,10, 0.9);
       }
       .bottom-align{
-          margin-top: 25%;
-          margin-bottom: 0px;
+	  position: absolute;
+          bottom: 0px;
       }
     `,]
 })
