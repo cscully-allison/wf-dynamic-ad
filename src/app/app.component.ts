@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,28 +10,49 @@ import { HttpClient } from '@angular/common/http'
 export class AppComponent {
   //offer_classes = [1, 2, 3, 4, 5, 6];
   selectedClass: number; //the selected classification
-  PostBody = {
-      check_bal_altered:null,
-      savings_acct_cnt:null,
-      checking_acct_cnt:null
-    };
+  PostBody = new Array(5);
 
 
 
   constructor(private http: HttpClient) {
   }
 
-  //function replaced with a ajax call
-  onSelect(classification: number) {
-      this.selectedClass = classification;
+  trackLines(index, item){
   }
 
+  //Post the values input by the user to our validation service
+  //Returns a json with a classification and a
   postFormValues(){
-    //replace url with your api
-    this.http.post('https://jsonplaceholder.typicode.com/posts', this.PostBody).subscribe( data => {
-          this.selectedClass = 1;
-          console.log("Post Data", data);
-      })
+    //variables
+    var ip = "0.0.0.0";
+    var queryString = "https://" + ip + "/api/predict/";
+    //var queryString = "https://jsonplaceholder.typicode.com/posts/";
+
+    //build query string
+    //queryString = this.buildQueryString(queryString, this.PostBody);
+
+    this.selectedClass = (Math.floor(Math.random()*1000) % 6) + 1;
+
+    //make api call and set value
+    this.http.get(queryString).subscribe( data => {
+
+
+        console.log("Post Data", data);
+    });
 
   }
+
+
+  buildQueryString(queryString: string, PostBody: string[]): string{
+      for(var x = 0; x < PostBody.length; x++){
+          //if we are appending the last value
+          if(x == (PostBody.length - 1)){
+              queryString += (PostBody[x] + "/");
+            return queryString;
+          }
+
+          queryString += (PostBody[x] + "+");
+      }
+  }
+
 }

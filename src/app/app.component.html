@@ -8,26 +8,15 @@
 
 <div style="text-align:center">
     <h1> Input Some Values </h1>
-  
+
 </div>
 <div class="banner">
   <div class="form">
-    <div class="form-field">
-      <div>Checking Acct Value </div>
-      <div class="border-divider"></div>
-      <input type="text" [(ngModel)]="PostBody.check_bal_altered"/> <br/>
+    <div *ngFor="let month of PostBody; index as i;  trackBy: trackLines" class="form-field">
+        <div>Checking Acct Value: Month {{i+1}}</div>
+        <div class="border-divider"></div>
+        <span class=""> $ <input type="text" [(ngModel)]="PostBody[i]"/> </span> <br/>
     </div>
-    <div class="form-field">
-      <div> Number of Savings Accounts </div>
-      <div class="border-divider"></div>
-      <input type="text" [(ngModel)]="PostBody.savings_acct_cnt"><br/>
-    </div>
-    <div class="form-field">
-      <div>Number of Checking Accounts</div>
-      <div class="border-divider"></div>
-      <input type="text" [(ngModel)]="PostBody.checking_acct_cnt"><br/>
-    </div>
-  </div>
   <div class="button-holder">
     <button class="submit-button" (click)="postFormValues()">Submit</button>
   </div>
