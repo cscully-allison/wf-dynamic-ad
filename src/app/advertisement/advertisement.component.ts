@@ -84,9 +84,9 @@ export class AdvertisementComponent {
 
     getBottomBanner(classification: number, change:number):string{
         if(change < 0){
-          return adDisplays[6];
+          return adDisplays[6].title;
         } else {
-          return adDisplays[classfication];
+          return adDisplays[classification].title;
         }
     
     }
