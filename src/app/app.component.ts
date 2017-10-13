@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   //offer_classes = [1, 2, 3, 4, 5, 6];
   selectedClass: number; //the selected classification
+  returnedChange: number;
   PostBody = new Array(5);
 
 
