@@ -4,18 +4,18 @@ const numLevels = 3;
 
 const adDisplays = [
   {id: 0, title: 'Null', text: 'Null Display' },
-  {id: 1, title: 'Home loans avialable up to 100,000 dollars. Click to find out more.'},
-  {id: 2, title: 'Home loans avialable up to 400,000 dollars. Click to find out more.' },
-  {id: 3, title: 'Home loans avialable up to 1,000,000 dollars. Click to find out more.' },
-  {id: 4, title: 'Home loans avialable up to 2,000,000 dollars. Click to find out more.' },
-  {id: 5, title: 'Property loans avialable up to 5,000,000 dollars. Click to find out more.' },
-  {id: 6, title: 'Property loans avialable up to 10,000,000 dollars. Click to find out more.' },
+  {id: 1, title: 'Consider growing your wealth with home loans avialable up to 100,000 dollars.'},
+  {id: 2, title: 'Consider growing your wealth with home loans avialable up to 400,000 dollars.' },
+  {id: 3, title: 'Consider growing your wealth with home loans avialable up to 1,000,000 dollars.' },
+  {id: 4, title: 'Consider growing your wealth with home loans avialable up to 2,000,000 dollars.' },
+  {id: 5, title: 'Consider growing your wealth with property loans avialable up to 5,000,000 dollars.' },
+  {id: 6, title: 'Consider growing your wealth with property loans avialable up to 10,000,000 dollars.' },
+  {id: 7, title: 'Click for additional info to grow your savings.'}
 ];
 
-const leadingQueries = [
-    "Ready to move into your dream home?",
-    "Have you considered investing in a property?",
-    "Have you considered real-estate investment?"
+const topicBanner = [
+    "We notice that you have been saving a lot.",
+    "It looks like you've had some unexpected expenses."
 ];
 
 const localImages = [
@@ -34,8 +34,8 @@ const localImages = [
             [style.backgroundImage]="'url('+ localImages[classification-1] +')'"
             [style.backgroundSize]="'100% 100%'"
             [style.backgroundRepeat]="'none'">
-          <h1 class="inner-ad-banner text-color">{{ getAppropriateQuery(1) }}</h1>
-          <h3 class="text-color bottom-banner bottom-align" >{{ adDisplays[classification].title }}</h3>
+          <h1 class="inner-ad-banner text-color">{{ getAppropriateQuery(classification, change) }}</h1>
+          <h3 class="text-color bottom-banner bottom-align" >{{ getBottomBanner(classification, change) }}</h3>
       </div>
     `,
     styles: [`
@@ -75,22 +75,30 @@ const localImages = [
 
 export class AdvertisementComponent {
     @Input() classification: number;
+    @Input() change: number;
+  
     adDisplays = adDisplays;
-    leadingQueries = leadingQueries;
+    topicBanner = topicBanner;
     numLevels = numLevels;
     localImages = localImages;
 
+    getBottomBanner(classification: number, change:number):string{
+        if(change < 0){
+          return adDisplays[6];
+        } else {
+          return adDisplays[classfication];
+        }
+    
+    }
 
-    getAppropriateQuery(classification: number):string {
-        if(classification < 3){
-            return leadingQueries[0];
+    getAppropriateQuery(classification: number, change:number):string {
+         if(change  < 0){
+            return topicBanner[1];
+         }
+         else{
+            return topicBanner[0];
         }
-        else if (classification < 5){
-            return leadingQueries[1];
-        }
-        else {
-            return leadingQueries[2];
-        }
+        
     };
 
 }
