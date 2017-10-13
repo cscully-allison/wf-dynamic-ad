@@ -16,7 +16,8 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {
   }
-
+  
+  //makes inputs work properly
   trackLines(index, item){
   }
 
@@ -24,14 +25,13 @@ export class AppComponent {
   //Returns a json with a classification and a
   postFormValues(){
     //variables
-    var ip = "0.0.0.0";
+    var ip = "0.0.0.0:5000";
     var queryString = "https://" + ip + "/api/predict/";
-    //var queryString = "https://jsonplaceholder.typicode.com/posts/";
 
     //build query string
-    //queryString = this.buildQueryString(queryString, this.PostBody);
+    queryString = this.buildQueryString(queryString, this.PostBody);
 
-    this.selectedClass = (Math.floor(Math.random()*1000) % 6) + 1;
+    //this.selectedClass = (Math.floor(Math.random()*1000) % 6) + 1;
 
     //make api call and set value
     this.http.get(queryString).subscribe( data => {
