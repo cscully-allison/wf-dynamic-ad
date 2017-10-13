@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core'
 const numLevels = 3;
 
 const adDisplays = [
-  {id: 0, title: 'Null', text: 'Null Display' },
+  {id: 0, title: 'Null' },
   {id: 1, title: 'Consider growing your wealth with home loans avialable up to 100,000 dollars.'},
   {id: 2, title: 'Consider growing your wealth with home loans avialable up to 400,000 dollars.' },
   {id: 3, title: 'Consider growing your wealth with home loans avialable up to 1,000,000 dollars.' },
